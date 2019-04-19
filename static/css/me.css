@@ -1,0 +1,22 @@
+.me-padding-updown-mini {
+    padding-top: 0.2em !important;
+    padding-bottom: 0.2em !important;
+}
+
+.me-padding-updown-massive {
+    padding-top: 5em !important;
+    padding-bottom: 2em !important;
+}
+
+/* text */
+.me-text-space-massive {
+    letter-spacing: 1px !important;
+}
+
+.me-text-lineHeight-tall {
+    line-height: 1.8;
+}
+
+.me-opacity-mini {
+    opacity: 0.9 !important;
+}
