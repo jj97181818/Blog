@@ -1,3 +1,7 @@
+body {
+    background: url("../images/leaves-pattern/leaves-pattern.png");
+}
+
 /* padding */
 .me-padding-updown-mini {
     padding-top: 0.2em !important;
