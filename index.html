@@ -11,13 +11,13 @@
         <!-- 導覽列 -->
         <nav class="ui inverted attached segment me-padding-updown-mini"> 
             <div class="ui container">
-                <div class="ui menu inverted secondary">
+                <div class="ui inverted secondary stackable menu">
                     <h2 class="ui header blue item">jj97181818</h2>
-                    <a href="#" class="item"><i class="icon home"></i>首頁</a>
-                    <a href="#" class="item"><i class="icon folder open"></i>分類</a>
-                    <a href="#" class="item"><i class="icon tags"></i>標籤</a>
-                    <a href="#" class="item"><i class="icon user"></i>關於我</a>
-                    <div class="right item">
+                    <a href="#" class="m-item item me-mobile-hide"><i class="icon home"></i>首頁</a>
+                    <a href="#" class="m-item item me-mobile-hide"><i class="icon folder open"></i>分類</a>
+                    <a href="#" class="m-item item me-mobile-hide"><i class="icon tags"></i>標籤</a>
+                    <a href="#" class="m-item item me-mobile-hide"><i class="icon user"></i>關於我</a>
+                    <div class="m-item right item me-mobile-hide">
                         <div class="ui icon input transparent inverted">
                             <input type="text" placeholder="Search">
                             <i class="icon link search"></i>
@@ -25,17 +25,29 @@
                     </div>
                 </div>
             </div>
+            <a class="ui menu toggle icon me-right-top button me-mobile-show">
+                <i class="sidebar icon"></i>
+            </a>
         </nav>
 
         <!-- 內容 -->
         <div class="me-padding-updown-massive">
             <div class="ui container">
-                <div class="ui grid">
+                <div class="ui mobile reversed stackable grid">
                     <!-- left card -->
                     <div class="four wide column">
+                        <!-- 頭像 -->
+                        <div class="ui horizontal divider header">
+                            shubon & banana
+                        </div>
+                        <div class="ui centered aligned">
+                            <img src="static/images/cute.jpg" class="ui medium circular image"  style="height: 220px; width:220px">
+                        </div>
+                        
+                        
 
                         <!-- 分類 -->
-                        <div class="ui segments">
+                        <div class="ui segments me-margin-updown-massive">
                             <div class="ui secondary segment">
                                 <div class="ui two column grid">
                                     <div class="column">
@@ -133,14 +145,6 @@
                                 </div>
                             </div>
                         </div>
-
-                        <div class="ui horizontal divider header">
-                            shubon & banana
-                        </div>
-
-                        <div class="ui centered card" >
-                            <img src="static/images/cute.jpg" style="height: 300px">
-                        </div>
                     </div>
 
                     <!-- right article -->
@@ -160,7 +164,7 @@
                         <!-- content -->
                         <div class="ui attached segment">
                             <div class="ui padded vertical segment me-padding-updown-big">
-                                <div class="ui grid">
+                                <div class="ui mobile reversed stackable grid">
                                     <div class="ten wide column">
                                         <h3 class="ui header">最大似然函數</h3>
                                         <p class="me-text-lineHeight-tall me-text-space-massive">
@@ -191,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="ui padded vertical segment me-padding-updown-big">
-                                <div class="ui grid">
+                                <div class="ui mobile reversed stackable grid">
                                     <div class="ten wide column">
                                         <h3 class="ui header">最大似然函數</h3>
                                         <p class="me-text-lineHeight-tall me-text-space-massive">
@@ -216,13 +220,13 @@
                                     </div>
                                     <div class="six wide column">
                                         <a href="#" target="blank">
-                                            <img src="https://source.unsplash.com/1600x900/?nature,water,summer,colorful,travel" class="ui image" >
+                                            <img src="https://source.unsplash.com/1600x900/?nature,water,summer,travel" class="ui image" >
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="ui padded vertical segment me-padding-updown-big">
-                                <div class="ui grid">
+                                <div class="ui mobile reversed stackable grid">
                                     <div class="ten wide column">
                                         <h3 class="ui header">最大似然函數</h3>
                                         <p class="me-text-lineHeight-tall me-text-space-massive">
@@ -247,13 +251,13 @@
                                     </div>
                                     <div class="six wide column">
                                         <a href="#" target="blank">
-                                            <img src="https://source.unsplash.com/1600x900/?nature,water,summer,colorful,travel" class="ui image" >
+                                            <img src="https://source.unsplash.com/1600x900/?nature,water,summer,travel" class="ui image" >
                                         </a>
                                     </div>
                                 </div>
                             </div>
                             <div class="ui padded vertical segment me-padding-updown-big">
-                                <div class="ui grid">
+                                <div class="ui mobile reversed stackable grid">
                                     <div class="ten wide column">
                                         <h3 class="ui header">最大似然函數</h3>
                                         <p class="me-text-lineHeight-tall me-text-space-massive">
@@ -316,7 +320,7 @@
         <!-- 底部 -->
         <footer class="ui inverted attached segment me-padding-updown-massive">
             <div class="ui container">
-                <div class="ui grid center aligned inverted divided">
+                <div class="ui stackable grid center aligned inverted divided">
                     <div class="three wide column">
                         <div class="ui inverted list link">
                             <div class="item">
@@ -345,8 +349,12 @@
             
         </footer>
 
-
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        <script>
+            $('.menu.toggle').click(function() {
+                $('.m-item').toggleClass('me-mobile-hide');
+            });
+        </script>
     </body>
 </html>
