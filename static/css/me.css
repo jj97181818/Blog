@@ -23,6 +23,11 @@ body {
     padding-bottom: 2em !important;
 }
 
+.me-padding-leftright-massive {
+    padding-left: 5em !important;
+    padding-right: 5em !important;
+}
+
 /* margin*/
 .me-margin-updown-small {
     margin-top : 0.5em !important;
